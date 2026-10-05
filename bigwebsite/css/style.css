@@ -1,0 +1,111 @@
+body {
+  min-width: 2500px;
+  min-height: 2500px;
+  position: relative;
+  overflow: auto;
+  background-color: #10102a;
+  font-family: 'Courier New', monospace;
+}
+
+#banner {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  font-size: 60px;
+  font-weight: bold;
+  color: #ffcc00;
+  text-decoration: underline;
+}
+
+.box {
+  position: absolute;
+  width: 250px;
+  height: 150px;
+  border: 4px dashed #ffffff;
+  padding: 15px;
+  margin: 10px;
+  background-color: #1a1a40;
+  color: #ffffff;
+  text-align: center;
+  font-style: italic;
+  opacity: 0.85;
+}
+
+span.highlight {
+  color: #ff3366;
+  font-weight: bold;
+}
+
+#secret {
+  position: absolute;
+  top: 2200px;
+  left: 2200px;
+  background-color: #ff0066;
+  color: #ffffff;
+  padding: 20px;
+  border: 2px solid #000000;
+}
+
+#photo {
+  position: absolute;
+  top: 1000px;
+  left: 400px;
+  width: 300px;
+  height: 300px;
+  border: 5px solid #ffffff;
+}
+
+#fragment1 {
+  top: 600px;
+  left: 300px;
+}
+
+#fragment2 {
+  top: 1400px;
+  left: 1600px;
+}
+
+#fragment3 {
+  top: 300px;
+  left: 2000px;
+}
+
+#fragment4 {
+  top: 1900px;
+  left: 800px;
+}
+
+#fragment5 {
+  top: 700px;
+  left: 1300px;
+  width: 180px;
+  height: 100px;
+}
+
+#photo2 {
+  position: absolute;
+  top: 2100px;
+  left: 1500px;
+  width: 250px;
+  height: 250px;
+  border: 5px solid #ffffff;
+  opacity: 0.9;
+}
+
+#photo3 {
+  position: absolute;
+  top: 280px;
+  left: 2320px;
+  width: 200px;
+  height: 200px;
+  border: 5px solid #ffffff;
+}
+
+#photo4 {
+  position: absolute;
+  top: 2300px;
+  left: 2200px;
+  width: 220px;
+  height: 220px;
+  border: 5px solid #ff0066;
+}
