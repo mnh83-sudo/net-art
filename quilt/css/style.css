@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+}
+
+body {
+  background-color: #264653;
+}
+
+#quilt {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+
+/* Two big blocks that span multiple rows and columns */
+.big1 {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+  background-color: #e76f51;
+  border-radius: 100% 0 0 0;
+}
+
+.big2 {
+  grid-column: 5 / span 2;
+  grid-row: 4 / span 2;
+  background-color: #6d597a;
+  border-radius: 0 0 0 100%;
+}
+
+/* Single-cell divs, each a different style */
+.c1 {
+  background-color: #e63946;
+}
+
+.c2 {
+  background-color: #f1faee;
+}
+
+.c3 {
+  background-color: #a8dadc;
+}
+
+.c4 {
+  background-color: #457b9d;
+}
+
+.c5 {
+  background-color: #1d3557;
+}
+
+.c6 {
+  background-color: #e9c46a;
+  border-radius: 50%;
+}
+
+.c7 {
+  background-color: #2a9d8f;
+  opacity: 0.6;
+}
