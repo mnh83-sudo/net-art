@@ -1,0 +1,113 @@
+body {
+  margin: 0;
+  background-color: black;
+}
+
+.screen {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #05070d;
+  overflow: hidden;
+}
+
+.shape {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  opacity: 0.3;
+  transition: opacity 1s ease;
+}
+
+.shape:nth-of-type(1) { background-color: hotpink;     top: 10%; left: 10%; }
+.shape:nth-of-type(2) { background-color: deepskyblue; top: 60%; left: 25%; }
+.shape:nth-of-type(3) { background-color: gold;        top: 20%; left: 60%; }
+.shape:nth-of-type(4) { background-color: lightgreen;  top: 65%; left: 75%; }
+
+.clock {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  margin-top: -150px;
+  margin-left: -150px;
+  border: 3px solid white;
+  border-radius: 50%;
+  opacity: 0.3;
+  transition: opacity 1s ease;
+}
+
+.mark {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+}
+.mark:nth-of-type(1) { top: 8px;    left: 50%;  margin-left: -5px; }
+.mark:nth-of-type(2) { right: 8px;  top: 50%;   margin-top: -5px; }
+.mark:nth-of-type(3) { bottom: 8px; left: 50%;  margin-left: -5px; }
+.mark:nth-of-type(4) { left: 8px;   top: 50%;   margin-top: -5px; }
+
+.hand {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.tip {
+  position: absolute;
+  left: 50%;
+  background-color: white;
+}
+.hour .tip   { width: 8px; height: 80px;  top: 70px; margin-left: -4px; }
+.minute .tip { width: 5px; height: 110px; top: 40px; margin-left: -2px; }
+.second .tip { width: 2px; height: 130px; top: 20px; margin-left: -1px; background-color: hotpink; }
+
+
+.screen:hover .shape { opacity: 1; }
+.screen:hover .clock { opacity: 1; }
+
+
+.screen:hover .shape:nth-of-type(1) { animation: float 6s ease-in-out infinite alternate; }
+.screen:hover .shape:nth-of-type(2) { animation: spin 8s linear infinite; }
+.screen:hover .shape:nth-of-type(3) { animation: float 9s ease-in-out infinite alternate-reverse; }
+.screen:hover .shape:nth-of-type(4) { animation: grow 4s ease-in-out infinite alternate; }
+
+.screen:hover .second { animation: sweep 60s linear infinite; }
+.screen:hover .minute { animation: sweep 3600s linear infinite; }
+.screen:hover .hour   { animation: sweep 43200s linear infinite; }
+
+
+.screen:active .shape:nth-of-type(1) { animation-duration: 2s; }
+.screen:active .shape:nth-of-type(2) { animation-duration: 2s; }
+.screen:active .shape:nth-of-type(3) { animation-duration: 3s; }
+.screen:active .shape:nth-of-type(4) { animation-duration: 1s; }
+.screen:active .second { animation-duration: 3s; }
+.screen:active .minute { animation-duration: 180s; }
+.screen:active .hour   { animation-duration: 2160s; }
+
+@keyframes float {
+  0%   { transform: translate(0px, 0px) scale(1); }
+  33%  { transform: translate(400px, 100px) scale(1.5); }
+  66%  { transform: translate(200px, 300px) scale(0.7); }
+  100% { transform: translate(600px, 50px) scale(1); }
+}
+
+@keyframes spin {
+  from { transform: translate(0px, 0px) rotate(0deg); }
+  to   { transform: translate(0px, 0px) rotate(360deg); }
+}
+
+@keyframes grow {
+  from { transform: scale(0.5); }
+  to   { transform: scale(4); }
+}
+
+@keyframes sweep {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
